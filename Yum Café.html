@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yum Café</title>
+    <style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff5e4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #5a1d6d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0.01px;
+        }
+
+        nav ul li {
+            margin: 0 50px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #fdd835;
+        }
+
+        .hero {
+            background-image: url('cafetwo.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(225, 228, 231);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color:#5a1d6d;
+            color: white;
+            cursor: pointer;
+           
+        }
+
+        .hero button:hover {
+            background-color: #5a1d6d;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+     
+
+        .section {
+            scroll-margin-top: 150px;
+            margin-bottom: 50px;
+            text-align: center;
+            
+        }
+      
+
+        .section h2 {
+            margin-bottom: 20px;
+            color:#5a1d6d;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+        }
+
+        .menu-item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .menu-item h3 {
+            margin: 10px;
+        }
+
+        .menu-item p {
+            margin: 0 10px 10px;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #fdd835;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, #f7f7f7, #fff);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-item {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.service-item:hover {
+    background-color: #f2f2f2;
+}
+
+.service-item i {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #5a1d6d;
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-item p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yum Café</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Welcome to Yum Café</h2>
+        <p>Your favorite spot for cozy ambiance and delicious food.</p>
+        <button>Explore Menu</button>
+    </section>
+
+    <div class="container">
+        <section class="section" id="menu">
+            <h2>Our Menu</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="grill.webp" alt="Delicious Meal">
+                    <h3>Grill Sandwich</h3>
+                    <p>$12.00</p>
+                </div>
+                <div class="menu-item">
+                    <img src="latte-small.jpg" alt="Tasty Beverage">
+                    <h3>Beverage: Latte</h3>
+                    <p>$5.00</p>
+                </div>
+                <div class="menu-item">
+                    <img src="cake.jpg" alt="Delightful Dessert">
+                    <h3>Dessert</h3>
+                    <p>$8.00</p>
+                </div>
+            </div>
+        </section>
+
+    
+        
+        <section class="section" id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Catering Services</h3>
+                    <p>We offer customized catering services for events and parties.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-truck"></i>
+                    <h3>Delivery Services</h3>
+                    <p>We deliver our delicious food to your doorstep.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h3>Event Hosting Services</h3>
+                    <p>We host events and parties in our restaurant.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <h2>About Us</h2>
+            <p>Yum Café is a place where delicious food meets a warm, inviting atmosphere. Join us to experience a perfect blend of taste and comfort.</p>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required><br><br>
+                <input type="email" placeholder="Your Email" required><br><br>
+                <textarea placeholder="Your Message" required></textarea><br><br>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Yum Café | <a href="#">Privacy Policy</a></p>
+        <p>Follow us on <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+    </footer>
+</body>
+</html>
